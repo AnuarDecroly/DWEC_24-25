@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar codigo JS en HTML</title>
+
+    <!-- JavaScript Interno -->
+    <script>
+        function mostrarMensajeInterno() {
+            alert("¡Este es un mensaje desde el JavaScript Interno!");
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Ejemplos de Inserción de JavaScript</h1>
+
+    <!-- Opcion 1: JavaScript en línea -->
+    <button onclick="mostrarMensajeEnLinea()">Clic en mí (En línea)
+        <script>
+            function mostrarMensajeEnLinea(){
+                alert('¡Este es un mensaje desde JavaScript en línea!')
+            }
+        </script>
+    </button>
+    
+    <br><br>
+
+    <!-- Opcion 2: JavaScript Interno -->
+    <button onclick="mostrarMensajeInterno()">Clic en mí (Interno)</button>
+    
+    <br><br>
+
+    <!-- Opcion 3: JavaScript Externo -->
+    <button onclick="mostrarMensajeExterno()">Clic en mí (Externo)</button>
+
+    <!-- Enlace a archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
