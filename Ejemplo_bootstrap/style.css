@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(112, 109, 181);
+    /*  */
+}
+
+.secciones{
+    margin:25pt;
+}
+
+.accordion-item{
+    border-color: rgb(241, 241, 241);
+    background-color: rgb(101, 162, 172);
+}
+
+.accordion-header{
+    background-color: rgb(47, 43, 86);
+}
+
+.accordion-button.collapsed {
+    color: white;
+    background: rgb(93, 93, 181);
+    /* margin:10pt; */
+}
+
+.table-danger{
+    background: brown;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.card{
+    margin-right: 10pt;
+}
+
+.btn-danger{
+    background-color: rgb(213, 83, 13);
+}
+
+.btn-danger:hover{
+    background-color: blueviolet;
+}
+
+.navbar{
+    margin-left: 0pt;
+    margin-right: 0pt;
+}
+
+.bg-body-tertiary{
+    background-color: rgb(72, 72, 108) !important;
+}
+
+.btn-secondary:hover{
+    background-color: blueviolet;
+}
+
+.iconos{
+    font-size:5em;
+}
+
