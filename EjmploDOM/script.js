@@ -1,3 +1,11 @@
+import Persona from "./Persona.js"; // Ruta correcta al archivo Js
+import Cliente from "./Cliente.js";
+
+const pp = new Persona("Pepe Perez","12345678X");
+const cliente = new Cliente("Pago Grande","12345678X", "cl_001");
+
+console.log(pp.name);
+
 var n = 1;
 
 document.addEventListener('DOMContentLoaded', function(event)
@@ -37,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function(event)
     divP.append(btn_1, btn_2, btn_3);
 
     const parr1 = document.createElement('p');
-    parr1.innerText = "Soy un parrafo nuevo ....";
+    parr1.innerText = cliente.name;
 
     parr1.classList.add('parrafo');
 
