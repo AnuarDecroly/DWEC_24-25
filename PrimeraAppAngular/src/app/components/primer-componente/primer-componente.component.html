@@ -5,6 +5,7 @@
         <p><strong>Apellidos: </strong> {{apellidos}}</p>
         <p><strong>Edad: </strong> {{edad}}</p>
         <p><strong>Email: </strong> {{email}}</p>
-        <p>{{alumnos[1]}}</p>
+        <p [class]="color">{{alumnos[1]}}</p>
+        <a [href]="ruta" [class.conten2]="isContened" [class.verde]="isVerde" >Pincha aquí</a>
     </div>
 </section>

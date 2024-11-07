@@ -3,3 +3,21 @@
     padding: 20px;
     background-color: aliceblue;
 }
+
+.conten2{
+    border: 1px solid blueviolet;
+    padding: 20px;
+    background-color: grey;
+}
+
+.rojo{
+    color:red
+}
+
+.verde{
+    color: green
+}
+
+.azul{
+    color: blue;
+}

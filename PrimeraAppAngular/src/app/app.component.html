@@ -8,5 +8,6 @@
   <hr>
   <app-primer-componente></app-primer-componente>
   <hr>
-  <app-segundo-componente></app-segundo-componente>
+  <app-segundo-componente [textoH]="'No te toco ni con un iphone'"
+  [longitud]="17" (borrar)="receptorBorrarPadre($event)"></app-segundo-componente>
 </section>

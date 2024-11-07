@@ -12,4 +12,9 @@ import { SegundoComponenteComponent } from "./components/segundo-componente/segu
 })
 export class AppComponent {
   title = 'PrimeraAppAngular';
+
+  receptorBorrarPadre($event: any): void{
+    console.log("Lo esta pintando el app-root "+$event);
+
+  }
 }

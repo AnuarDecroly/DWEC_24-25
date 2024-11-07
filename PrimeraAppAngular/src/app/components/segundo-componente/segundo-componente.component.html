@@ -3,5 +3,20 @@
     <div class="contenedor">
         <h3>Soy el segundo componente</h3>
         <p>Estoy en funcionamiento</p>
+        <label for="nombre">Nombre </label>
+        <input type="text" id="nombre" placeholder="Introduce tu nombre" [(ngModel)] = "mitexto" (blur)="validarNombre($event)">
+
+        <p>{{mitexto}}</p>
+        <button id="btnLogIn" (click)="hacerClick()">Click me</button>
+        <br>
+        <hr>
+        <p>Esto viene de mi padre {{textoH}}</p>
+        <p>La longitud que me da mi padre es {{longitud}}</p>
+
+        <hr>
+        <br>
+        <button (click)="onDelete(5)">Enviar numero</button>
+
+
     </div>
 </section>
