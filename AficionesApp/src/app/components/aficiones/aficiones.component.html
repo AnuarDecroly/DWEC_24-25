@@ -1,0 +1,17 @@
+<article>
+    <div>
+        <label for="aficion">Aficion: </label>
+        <input type="text" name="aficion" id="aficion" placeholder="Introduce una aficion" [(ngModel)] = "newAficion.aficion">
+    </div>
+    <div>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" [(ngModel)] = "newAficion.nombre">
+    </div>
+    <br>
+    <button (click)="guardarDatos()">Guardar</button>
+
+    <hr><br>
+    <div id="listadoAficiones" [innerHTML]="cargarDatos()">
+
+    </div>
+</article>
