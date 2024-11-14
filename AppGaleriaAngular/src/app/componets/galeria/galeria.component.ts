@@ -30,7 +30,6 @@ export class GaleriaComponent {
         url: 'https://placehold.co/600x400/red/white',
         title: 'Rojo'
       }
-
     ]
   }
 

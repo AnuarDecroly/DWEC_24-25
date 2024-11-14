@@ -1,0 +1,15 @@
+<h2>Lista de estudiantes aventajados en Angular con Anuar</h2>
+<button (click)="insertarEstudiante()">Insertar</button>
+<ul>
+    @for(estudiante of estudiantes; track estudiante.id; let i = $index;
+    let par = $even; let impar = $odd){
+        <li class="estudiante" [class.par]="par" [class.impar]="impar">
+            <span>{{i}}:  </span>
+            <span><strong>Nombre: </strong>{{estudiante.name}}</span>
+            <span><strong>    -- Edad: </strong>{{estudiante.age}}</span>
+        </li>
+    }@empty{
+        <li>No hay estudiantes en la lista</li>
+    }
+
+</ul>

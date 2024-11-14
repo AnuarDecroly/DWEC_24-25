@@ -1,0 +1,21 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.estudiante{
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.par{
+    background-color: aliceblue;
+}
+
+.impar{
+    background-color: lightgray;
+}

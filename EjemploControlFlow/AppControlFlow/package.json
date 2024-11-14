@@ -1,5 +1,5 @@
 {
-  "name": "app-galeria-angular",
+  "name": "app-control-flow",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -18,8 +18,7 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
-    "app-galeria-angular": "file:",
-    "bootstrap": "^5.3.3",
+    "app-control-flow": "file:",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

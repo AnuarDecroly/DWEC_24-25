@@ -1,0 +1,53 @@
+<nav>
+    <ul class="menu">
+        @switch (role) {
+            @case('admin'){
+                <li><a href="">Crear nuevo</a></li>
+                <li><a href="">Ver Listado</a></li>
+                <li><a href="">Crear usuarios</a></li>
+                <li><a href="">Borrar usuarios</a></li>
+
+                <ul>
+                @for(estudiante of estudiantes; track estudiante.id; let i = $index;
+                let par = $even; let impar = $odd){
+                    <li class="estudiante" [class.par]="par" [class.impar]="impar">
+                        <span>{{i}}:  </span>
+                        <span><strong>Nombre: </strong>{{estudiante.name}}</span>
+                        <span><strong>    -- Edad: </strong>{{estudiante.age}}</span>
+                    </li>
+                }@empty{
+                    <li>No hay estudiantes en la lista</li>
+                }
+                
+                </ul>
+            }
+            @case ('editor') {
+                <li><a href="">Crear nuevo</a></li>
+                <li><a href="">Ver Listado</a></li>                
+            }
+            @case('suscriptor'){
+                <li><a href="">Ver Listado</a></li>
+            }
+            @default {
+                <p>No tienes permisos para ver el contenido</p>
+            }
+        }
+    </ul>
+</nav>
+
+<hr>
+<h2>Lista de estudiantes aventajados en Angular con Anuar</h2>
+<button (click)="insertarEstudiante()">Insertar</button>
+<ul>
+    @for(estudiante of estudiantes; track estudiante.id; let i = $index;
+    let par = $even; let impar = $odd){
+        <li class="estudiante" [class.par]="par" [class.impar]="impar">
+            <span>{{i}}:  </span>
+            <span><strong>Nombre: </strong>{{estudiante.name}}</span>
+            <span><strong>    -- Edad: </strong>{{estudiante.age}}</span>
+        </li>
+    }@empty{
+        <li>No hay estudiantes en la lista</li>
+    }
+
+</ul>

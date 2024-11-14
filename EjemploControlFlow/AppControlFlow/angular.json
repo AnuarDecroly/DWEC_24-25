@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AppGaleriaAngular": {
+    "AppControlFlow": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/app-galeria-angular",
+            "outputPath": "dist/app-control-flow",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -52,9 +52,9 @@
               }
             ],
             "styles": [
-              "src/styles.css","node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -84,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AppGaleriaAngular:build:production"
+              "buildTarget": "AppControlFlow:build:production"
             },
             "development": {
-              "buildTarget": "AppGaleriaAngular:build:development"
+              "buildTarget": "AppControlFlow:build:development"
             }
           },
           "defaultConfiguration": "development"
