@@ -1,0 +1,5 @@
+.cardAsistente{
+    border: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+}

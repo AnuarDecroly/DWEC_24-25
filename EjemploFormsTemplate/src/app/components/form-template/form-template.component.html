@@ -1,0 +1,54 @@
+<section class="container mt-3">
+    <h2>Formulario Template Decroly</h2>
+    <hr>
+    <div>
+        <form action="" class="shadow p-5" #miFormulario="ngForm" (ngSubmit)="getDataForm(miFormulario)">
+            <div>
+                <label for="nombre" class="form-label mt-3">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre"
+                placeholder="Introduce tu nombre" ngModel>
+            </div>
+
+            <div>
+                <label for="email" class="form-label mt-3">Email</label>
+                <input type="text" class="form-control" id="email" name="email"
+                placeholder="Introduce tu email" ngModel>
+            </div>
+
+            <div>
+                <label for="edad" class="form-label mt-3">Edad</label>
+                <input type="number" class="form-control" id="edad" name="edad"
+                placeholder="Introduce tu edad" ngModel>
+            </div>
+
+            <div>
+                <label for="cargo" class="form-label mt-3">Cargo</label>
+                <select class="form-select" id="cargo" name="cargo" ngModel>
+                    <option value="" selected> Seleciona un cargo</option>
+                    <option value="Desarrollador">Desarrollador</option>
+                    <option value="SEO">SEO</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Enviar" class="btn btn-danger mt-5">
+        </form>
+    </div>
+</section>
+
+<hr>
+<section class="container mt-3">
+<h2>Lista de participantes</h2>
+@for (item of arrIasistentes; track $index) {
+    <div class="container mt-3  mb-5 cardAsistente">
+        <p class="mt-3"> <strong>Nombre: </strong> {{item.nombre}}</p> 
+        <p><strong>Edad: </strong>{{item.edad}}</p>
+        <p><strong>Email: </strong> {{item.email}}</p>
+        <p><strong>Cargo: </strong> {{item.cargo}}</p>       
+    </div>
+
+}
+@empty {
+    <h3>No hay elementos</h3>
+}
+</section>
