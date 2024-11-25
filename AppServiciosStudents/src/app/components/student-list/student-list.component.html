@@ -1,0 +1,10 @@
+<h2>Mis estudiantes</h2>
+<hr>
+
+<div class="row g-2">
+    @for(alumno of alumnos; track alumno.id){
+        <article class="col-12 col-md-6 col-lg-4">
+            <app-student-card [miAlumno]="alumno"></app-student-card>
+        </article>
+    }
+</div>
