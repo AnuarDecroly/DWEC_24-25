@@ -1,10 +1,17 @@
 <h2>Mis estudiantes</h2>
 <hr>
+<div class="mt-5">
+    <app-filter-course (cursoSeleccionado)="getCourse($event)"></app-filter-course>
+</div>
 
-<div class="row g-2">
+<hr>
+<div class="row g-2 mt-5">
     @for(alumno of alumnos; track alumno.id){
         <article class="col-12 col-md-6 col-lg-4">
             <app-student-card [miAlumno]="alumno"></app-student-card>
         </article>
+    }
+    @empty {
+        <h2>NO HAY RESULTADOS</h2>
     }
 </div>
