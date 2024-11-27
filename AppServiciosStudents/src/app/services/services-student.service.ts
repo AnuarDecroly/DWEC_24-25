@@ -20,17 +20,6 @@ export class ServicesStudentService {
     this.id = 4;
     this.arrCurso = CURSOS;
 
-        //Obtenemos mediante el fecth los datos de la API
-    //http://jsonblob.com/1285969973124915200
-    fetch("https://peticiones.online/api/series")
-    .then(response => response.json())
-    .then(series => {
-          this.arrSeries = series;
-          console.log(series);
-        
-    });
-
-
   }
 
   getAll():IStudent []{
@@ -55,10 +44,5 @@ export class ServicesStudentService {
     return this.arrAlumnos.filter(alumno => alumno.curso.includes(course));
   }
 
-  getAllSeries(): any[]
-  {
-      return this.arrSeries;
-  }
 
-  //deleteStudent
 }
