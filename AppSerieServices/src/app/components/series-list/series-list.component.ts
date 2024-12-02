@@ -12,13 +12,16 @@ import { SerieCardComponent } from "../serie-card/serie-card.component";
 })
 export class SeriesListComponent {
 
-  arrSeries!: ISerie[];
+
+  arrSeries: ISerie[] = [];
   seriesService = inject(SeriesServicesService);
 
   
   ngOnInit(){
     this.arrSeries = this.seriesService.getAllSeries();
   }
+
+  
 
 
 

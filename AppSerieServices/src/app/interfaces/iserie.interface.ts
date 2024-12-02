@@ -1,5 +1,5 @@
 export interface ISerie {
-    id?:      number;
+    id:      number;
     title:   string;
     creator: string;
     rating:  number;

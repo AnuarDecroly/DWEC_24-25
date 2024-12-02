@@ -16,15 +16,26 @@ export class SeriesServicesService {
         series.forEach((element: any) => {
           let serie = element as ISerie;
           this.arrSeries.push(serie);
-          
         });
-          this.arrSeries = series;
     }
   );
 
   }
 
   getAllSeries(): ISerie[]{
+    return this.arrSeries;
+  }
+
+  deleteByTitle(title : string) : ISerie[]{
+    // this.arrSeries = this.arrSeries.filter(serie => serie.title !== title);
+    let i = this.arrSeries.findIndex(serie => serie.title == title);
+    if(i != -1 && i >= 0 && i < this.arrSeries.length){
+      this.arrSeries.splice(i, 1);
+    }
+    
+
+    console.log(this.arrSeries);
+
     return this.arrSeries;
   }
 

@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ISerie } from '../../interfaces/iserie.interface';
+import { SeriesServicesService } from '../../services/series-services.service';
 
 @Component({
   selector: 'app-serie-card',
@@ -11,6 +12,11 @@ import { ISerie } from '../../interfaces/iserie.interface';
 export class SerieCardComponent {
 
 
+serieService = inject(SeriesServicesService);
   @Input() miSerie!: ISerie;
+
+  deleteSerie(serie : ISerie) {
+    this.serieService.deleteByTitle(serie.title);
+  }
 
 }
