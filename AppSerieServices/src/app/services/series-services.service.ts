@@ -17,6 +17,8 @@ export class SeriesServicesService {
           let serie = element as ISerie;
           this.arrSeries.push(serie);
         });
+
+        
     }
   );
 
