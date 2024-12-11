@@ -1,1 +1,13 @@
-<p>servicios works!</p>
+<section class="container mt-3">
+    <h2>Nuestros Servicios</h2>
+    <hr>
+    <div class="row g-3">
+        @for(servicio of arrServicios; track servicio.id){
+            <article class="col-12 col-md-6 col-lg-4">
+                <app-service-card [miServicio]="servicio"></app-service-card>
+            </article>
+        }@empty {
+            <p>No disponemos de servios en estos momentos</p>
+        }
+    </div>
+</section>
