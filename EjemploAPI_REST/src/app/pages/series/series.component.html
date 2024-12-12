@@ -1,0 +1,7 @@
+<div class="row">
+    @for(serie of arrSeries; track serie.id){
+        <article class="col-12 col-md-6 col-sd-3">
+            <app-series-card [miSerie]="serie"></app-series-card>
+        </article>
+    }
+</div>

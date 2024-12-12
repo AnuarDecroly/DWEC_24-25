@@ -1,0 +1,18 @@
+<section class="container mt-3">
+    <div class="card shadow p-3">
+        <div class="row">
+            <figure class="col-12 col-md-3">
+                <img class="img-fluid" [src]="miSerie.image" [alt]="miSerie.title">
+            </figure>
+            <div class="col-12 col-md-9">
+                <h2>{{miSerie.title}}</h2>
+                <hr>
+                <p>Canal de retrasmisión: {{miSerie.channel}}</p>
+                <p>Creador: {{miSerie.title}}</p>
+                <p>Puntuación: {{miSerie.rating}}</p>
+                <p>Fecha: {{miSerie.dates}}</p>
+            </div>
+            <a [routerLink]="['/series']" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+</section>
