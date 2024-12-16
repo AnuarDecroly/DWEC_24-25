@@ -11,8 +11,8 @@
                 <p>Creador: {{miSerie.title}}</p>
                 <p>Puntuación: {{miSerie.rating}}</p>
                 <p>Fecha: {{miSerie.dates}}</p>
+                <app-botonera-serie [parent]="'view'" [miId]="miSerie._id"></app-botonera-serie>
             </div>
-            <a [routerLink]="['/series']" class="btn btn-secondary">Volver</a>
         </div>
     </div>
 </section>

@@ -30,5 +30,17 @@ export class SeriesService {
     return this.httpClient.get<ISeries>(`${this.baseUrl}/${id}`);
   }
 
+  insert(serie: ISeries): Promise<ISeries>{
+    return lastValueFrom(this.httpClient.post<ISeries>(this.baseUrl, serie));
+  }
+
+  update(serie: ISeries): Promise<ISeries>{
+    return lastValueFrom(this.httpClient.put<ISeries>(`${this.baseUrl}/${serie._id}`, serie));
+  }
+
+  delete(idserie: string) : Promise<ISeries>{
+    return lastValueFrom(this.httpClient.delete<ISeries>(`${this.baseUrl}/${idserie}`));
+  }
+
 
 }

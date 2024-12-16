@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { SeriesService } from '../../services/series.service';
 import { ISeries } from '../../interfaces/iseries';
+import { BotoneraSerieComponent } from "../../components/botonera-serie/botonera-serie.component";
 
 @Component({
   selector: 'app-series-view',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, BotoneraSerieComponent],
   templateUrl: './series-view.component.html',
   styleUrl: './series-view.component.css'
 })

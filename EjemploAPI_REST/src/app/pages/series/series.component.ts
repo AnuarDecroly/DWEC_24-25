@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { SeriesService } from '../../services/series.service';
 import { ISeries } from '../../interfaces/iseries';
 import { SeriesCardComponent } from "../../components/series-card/series-card.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-series',
   standalone: true,
-  imports: [SeriesCardComponent],
+  imports: [SeriesCardComponent, RouterLink],
   templateUrl: './series.component.html',
   styleUrl: './series.component.css'
 })
