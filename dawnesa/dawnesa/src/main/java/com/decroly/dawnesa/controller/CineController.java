@@ -34,10 +34,11 @@ public class CineController {
     @GetMapping("/all")
     public ResponseEntity<List<Cine>> getAllCinemas() {
         List<Cine> cines = this.cineService.getAllCinemas();
-        if(cines.size() > 0){
+        if(!cines.isEmpty()){
             return ResponseEntity.ok(cines);
         }else{
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            //return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
         
     }
