@@ -1,5 +1,6 @@
 package com.decroly.dawnesa.service;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -23,7 +24,8 @@ public class CineService {
     }
 
     public List<Cine> getAllCinemas() {
-		return this.cineRepository.findAll();
+        return new LinkedList<Cine>();
+		//return this.cineRepository.findAll();
 	}
 
     public Cine getCinemaByCode(String cod){

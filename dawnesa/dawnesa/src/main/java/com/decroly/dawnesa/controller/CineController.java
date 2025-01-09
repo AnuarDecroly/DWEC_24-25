@@ -2,6 +2,8 @@ package com.decroly.dawnesa.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,8 +32,14 @@ public class CineController {
 
     //http://localhost:8083/api/cinemas/all
     @GetMapping("/all")
-    public List<Cine> getAllCinemas() {
-        return this.cineService.getAllCinemas();
+    public ResponseEntity<List<Cine>> getAllCinemas() {
+        List<Cine> cines = this.cineService.getAllCinemas();
+        if(cines.size() > 0){
+            return ResponseEntity.ok(cines);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        
     }
 
     //http://localhost:8083/api/cinemas/cod
